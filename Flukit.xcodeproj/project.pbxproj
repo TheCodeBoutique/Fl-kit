@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E73AAE1188226CF0006D699 /* TCBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73AADF188226CF0006D699 /* TCBLoginViewController.m */; };
+		7E73AAE2188226CF0006D699 /* TCBLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E73AAE0188226CF0006D699 /* TCBLoginViewController.xib */; };
 		7E7C259518821FD5005D9AB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C259418821FD5005D9AB4 /* Foundation.framework */; };
 		7E7C259718821FD5005D9AB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C259618821FD5005D9AB4 /* CoreGraphics.framework */; };
 		7E7C259918821FD5005D9AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C259818821FD5005D9AB4 /* UIKit.framework */; };
@@ -19,7 +21,6 @@
 		7E7C25B018821FD5005D9AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C259818821FD5005D9AB4 /* UIKit.framework */; };
 		7E7C25B818821FD5005D9AB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E7C25B618821FD5005D9AB4 /* InfoPlist.strings */; };
 		7E7C25BA18821FD5005D9AB4 /* FlukitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C25B918821FD5005D9AB4 /* FlukitTests.m */; };
-		7E7C25C4188221F6005D9AB4 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7C25C3188221F6005D9AB4 /* Login.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E73AADE188226CF0006D699 /* TCBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCBLoginViewController.h; sourceTree = "<group>"; };
+		7E73AADF188226CF0006D699 /* TCBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCBLoginViewController.m; sourceTree = "<group>"; };
+		7E73AAE0188226CF0006D699 /* TCBLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCBLoginViewController.xib; sourceTree = "<group>"; };
 		7E7C259118821FD5005D9AB4 /* Flukit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flukit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7C259418821FD5005D9AB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7E7C259618821FD5005D9AB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -49,7 +53,6 @@
 		7E7C25B518821FD5005D9AB4 /* FlukitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlukitTests-Info.plist"; sourceTree = "<group>"; };
 		7E7C25B718821FD5005D9AB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E7C25B918821FD5005D9AB4 /* FlukitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlukitTests.m; sourceTree = "<group>"; };
-		7E7C25C3188221F6005D9AB4 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E73AAE3188226E00006D699 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7E73AADE188226CF0006D699 /* TCBLoginViewController.h */,
+				7E73AADF188226CF0006D699 /* TCBLoginViewController.m */,
+				7E73AAE0188226CF0006D699 /* TCBLoginViewController.xib */,
+			);
+			name = Login;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		7E7C258818821FD5005D9AB4 = {
 			isa = PBXGroup;
 			children = (
@@ -109,9 +123,9 @@
 		7E7C259A18821FD5005D9AB4 /* Flukit */ = {
 			isa = PBXGroup;
 			children = (
+				7E73AAE3188226E00006D699 /* Login */,
 				7E7C25A318821FD5005D9AB4 /* TCBAppDelegate.h */,
 				7E7C25A418821FD5005D9AB4 /* TCBAppDelegate.m */,
-				7E7C25C3188221F6005D9AB4 /* Login.xib */,
 				7E7C25A618821FD5005D9AB4 /* Images.xcassets */,
 				7E7C259B18821FD5005D9AB4 /* Supporting Files */,
 			);
@@ -223,9 +237,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E73AAE2188226CF0006D699 /* TCBLoginViewController.xib in Resources */,
 				7E7C259F18821FD5005D9AB4 /* InfoPlist.strings in Resources */,
 				7E7C25A718821FD5005D9AB4 /* Images.xcassets in Resources */,
-				7E7C25C4188221F6005D9AB4 /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +260,7 @@
 			files = (
 				7E7C25A518821FD5005D9AB4 /* TCBAppDelegate.m in Sources */,
 				7E7C25A118821FD5005D9AB4 /* main.m in Sources */,
+				7E73AAE1188226CF0006D699 /* TCBLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +463,7 @@
 				7E7C25BF18821FD5005D9AB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E7C25C018821FD5005D9AB4 /* Build configuration list for PBXNativeTarget "FlukitTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +472,7 @@
 				7E7C25C218821FD5005D9AB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
