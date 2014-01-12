@@ -1,18 +1,18 @@
 //
-//  TCBLoginViewController.m
+//  TCBAutoLoginViewController.m
 //  Flukit
 //
 //  Created by Marin Fischer on 1/11/14.
 //  Copyright (c) 2014 TheCodeBoutique. All rights reserved.
 //
 
-#import "TCBLoginViewController.h"
+#import "TCBAutoLoginViewController.h"
 
-@interface TCBLoginViewController ()
+@interface TCBAutoLoginViewController ()
 
 @end
 
-@implementation TCBLoginViewController
+@implementation TCBAutoLoginViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -36,15 +35,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)signinButton:(id)sender
-{
-}
-
-- (IBAction)facebookSigninButton:(id)sender
-{
-}
-
-- (IBAction)createAccountButton:(id)sender
-{
-}
 @end

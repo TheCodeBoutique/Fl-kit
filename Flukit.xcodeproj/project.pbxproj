@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7E73AAE1188226CF0006D699 /* TCBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73AADF188226CF0006D699 /* TCBLoginViewController.m */; };
 		7E73AAE2188226CF0006D699 /* TCBLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E73AAE0188226CF0006D699 /* TCBLoginViewController.xib */; };
+		7E73AAE718822CD80006D699 /* TCBAutoLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73AAE518822CD80006D699 /* TCBAutoLoginViewController.m */; };
+		7E73AAE818822CD80006D699 /* TCBAutoLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E73AAE618822CD80006D699 /* TCBAutoLoginViewController.xib */; };
 		7E7C259518821FD5005D9AB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C259418821FD5005D9AB4 /* Foundation.framework */; };
 		7E7C259718821FD5005D9AB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C259618821FD5005D9AB4 /* CoreGraphics.framework */; };
 		7E7C259918821FD5005D9AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C259818821FD5005D9AB4 /* UIKit.framework */; };
@@ -37,6 +39,9 @@
 		7E73AADE188226CF0006D699 /* TCBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCBLoginViewController.h; sourceTree = "<group>"; };
 		7E73AADF188226CF0006D699 /* TCBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCBLoginViewController.m; sourceTree = "<group>"; };
 		7E73AAE0188226CF0006D699 /* TCBLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCBLoginViewController.xib; sourceTree = "<group>"; };
+		7E73AAE418822CD80006D699 /* TCBAutoLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCBAutoLoginViewController.h; sourceTree = "<group>"; };
+		7E73AAE518822CD80006D699 /* TCBAutoLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCBAutoLoginViewController.m; sourceTree = "<group>"; };
+		7E73AAE618822CD80006D699 /* TCBAutoLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCBAutoLoginViewController.xib; sourceTree = "<group>"; };
 		7E7C259118821FD5005D9AB4 /* Flukit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flukit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7C259418821FD5005D9AB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7E7C259618821FD5005D9AB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +90,9 @@
 				7E73AADE188226CF0006D699 /* TCBLoginViewController.h */,
 				7E73AADF188226CF0006D699 /* TCBLoginViewController.m */,
 				7E73AAE0188226CF0006D699 /* TCBLoginViewController.xib */,
+				7E73AAE418822CD80006D699 /* TCBAutoLoginViewController.h */,
+				7E73AAE518822CD80006D699 /* TCBAutoLoginViewController.m */,
+				7E73AAE618822CD80006D699 /* TCBAutoLoginViewController.xib */,
 			);
 			name = Login;
 			path = ..;
@@ -238,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E73AAE2188226CF0006D699 /* TCBLoginViewController.xib in Resources */,
+				7E73AAE818822CD80006D699 /* TCBAutoLoginViewController.xib in Resources */,
 				7E7C259F18821FD5005D9AB4 /* InfoPlist.strings in Resources */,
 				7E7C25A718821FD5005D9AB4 /* Images.xcassets in Resources */,
 			);
@@ -259,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E7C25A518821FD5005D9AB4 /* TCBAppDelegate.m in Sources */,
+				7E73AAE718822CD80006D699 /* TCBAutoLoginViewController.m in Sources */,
 				7E7C25A118821FD5005D9AB4 /* main.m in Sources */,
 				7E73AAE1188226CF0006D699 /* TCBLoginViewController.m in Sources */,
 			);

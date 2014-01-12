@@ -7,6 +7,8 @@
 //
 
 #import "TCBAppDelegate.h"
+#import "TCBLoginViewController.h"
+#import "TCBAutoLoginViewController.h"
 
 @implementation TCBAppDelegate
 
@@ -17,6 +19,26 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)loadDeviceControllers
+{
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPhone)
+//    {
+        //for iphone
+//        BOOL autoLogin = [[NSUserDefaults standardUserDefaults] stringForKey:@"autologin"];
+//        NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+//        NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
+//        
+//        TCBLoginViewController *loginViewController = [[TCBLoginViewController alloc] initWithNibName:@"TCBLoginViewController" bundle:nil];
+//        
+//        TCBAutoLoginViewController *autoLoginViewController = [[TCBAutoLoginViewController alloc] initWithNibName:@"TCBAutoLoginViewController" bundle:nil];
+//    }
+//    if (autoLogin && username && password)
+//    {
+//        [[self window] setRootViewController:autoLoginViewController];
+//
+//    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
