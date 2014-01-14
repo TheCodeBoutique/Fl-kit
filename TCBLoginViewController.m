@@ -8,6 +8,7 @@
 
 #import "TCBLoginViewController.h"
 #import "TCBCreateAccountViewController.h"
+#import "TCBCardViewController.h"
 #import "MBProgressHUD.h"
 #import "UIAlertView+Blocks.h"
 #import "RIButtonItem.h"
@@ -85,6 +86,11 @@
             NSLog(@"User logged in with Twitter!");
         }     
     }];
+}
+
+- (IBAction)testAccount:(id)sender {
+    TCBCardViewController *cardApp = [[TCBCardViewController alloc] initWithNibName:@"TCBCardViewController" bundle:nil];
+    [[self navigationController] pushViewController:cardApp animated:YES];    
 }
 
 - (IBAction)facebookSigninButton:(id)sender
