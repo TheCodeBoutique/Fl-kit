@@ -23,6 +23,9 @@
 		7E7C25B018821FD5005D9AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7C259818821FD5005D9AB4 /* UIKit.framework */; };
 		7E7C25B818821FD5005D9AB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E7C25B618821FD5005D9AB4 /* InfoPlist.strings */; };
 		7E7C25BA18821FD5005D9AB4 /* FlukitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C25B918821FD5005D9AB4 /* FlukitTests.m */; };
+		7ED3C69D1884C5B100843EBB /* flickhand.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3C69A1884C5B100843EBB /* flickhand.png */; };
+		7ED3C69E1884C5B100843EBB /* Mr.Flukit.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3C69B1884C5B100843EBB /* Mr.Flukit.png */; };
+		7ED3C6A11884C64C00843EBB /* openhand.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3C6A01884C64C00843EBB /* openhand.png */; };
 		D40D760C1883AAC2000AB22E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40D760B1883AAC2000AB22E /* AudioToolbox.framework */; };
 		D40D760E1883AACC000AB22E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40D760D1883AACC000AB22E /* CFNetwork.framework */; };
 		D40D76101883AAE4000AB22E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40D760F1883AAE4000AB22E /* CoreLocation.framework */; };
@@ -75,6 +78,9 @@
 		7E7C25B518821FD5005D9AB4 /* FlukitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlukitTests-Info.plist"; sourceTree = "<group>"; };
 		7E7C25B718821FD5005D9AB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E7C25B918821FD5005D9AB4 /* FlukitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlukitTests.m; sourceTree = "<group>"; };
+		7ED3C69A1884C5B100843EBB /* flickhand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flickhand.png; sourceTree = "<group>"; };
+		7ED3C69B1884C5B100843EBB /* Mr.Flukit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mr.Flukit.png; sourceTree = "<group>"; };
+		7ED3C6A01884C64C00843EBB /* openhand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openhand.png; sourceTree = "<group>"; };
 		D40D760B1883AAC2000AB22E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D40D760D1883AACC000AB22E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D40D760F1883AAE4000AB22E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -154,6 +160,7 @@
 		7E7C258818821FD5005D9AB4 = {
 			isa = PBXGroup;
 			children = (
+				7ED3C69F1884C5C600843EBB /* Images */,
 				7E7C259A18821FD5005D9AB4 /* Flukit */,
 				7E7C25B318821FD5005D9AB4 /* FlukitTests */,
 				7E7C259318821FD5005D9AB4 /* Frameworks */,
@@ -233,6 +240,16 @@
 				7E7C25B618821FD5005D9AB4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7ED3C69F1884C5C600843EBB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7ED3C6A01884C64C00843EBB /* openhand.png */,
+				7ED3C69B1884C5B100843EBB /* Mr.Flukit.png */,
+				7ED3C69A1884C5B100843EBB /* flickhand.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		D40D76291883AF7F000AB22E /* ProgressHUDD */ = {
@@ -336,7 +353,10 @@
 				D40D76251883AD6E000AB22E /* TCBCreateAccountViewController.xib in Resources */,
 				7E73AAE2188226CF0006D699 /* TCBLoginViewController.xib in Resources */,
 				7E73AAE818822CD80006D699 /* TCBAutoLoginViewController.xib in Resources */,
+				7ED3C69E1884C5B100843EBB /* Mr.Flukit.png in Resources */,
+				7ED3C6A11884C64C00843EBB /* openhand.png in Resources */,
 				7E7C259F18821FD5005D9AB4 /* InfoPlist.strings in Resources */,
+				7ED3C69D1884C5B100843EBB /* flickhand.png in Resources */,
 				7E7C25A718821FD5005D9AB4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
