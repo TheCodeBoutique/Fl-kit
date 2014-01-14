@@ -18,17 +18,20 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
-- (IBAction)createUserTapped:(id)sender {
+- (IBAction)createUserTapped:(id)sender
+{
     MBProgressHUD *hud;
     hud = [MBProgressHUD showHUDAddedTo:[[[[UIApplication sharedApplication] keyWindow] rootViewController] view] animated:YES];
     hud.mode = MBProgressHUDModeDeterminate;
@@ -39,7 +42,8 @@
     user.password = [_password text];
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
+        if (!error)
+        {
             [hud hide:YES];
             [[self navigationController] popToRootViewControllerAnimated:YES]; //TODO Remove once game is created
     
@@ -51,7 +55,8 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 @end

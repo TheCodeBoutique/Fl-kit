@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface TCBLoginViewController : UIViewController
+@interface TCBLoginViewController : UIViewController < UITextFieldDelegate>
+
+
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)signinButton:(id)sender;
 - (IBAction)facebookSigninButton:(id)sender;
 - (IBAction)createAccountButton:(id)sender;
+
 @end

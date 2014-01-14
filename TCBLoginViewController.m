@@ -13,16 +13,36 @@
 #import "UIAlertView+Blocks.h"
 #import "RIButtonItem.h"
 @interface TCBLoginViewController ()
+{
+    CGSize scrollViewContentSize;
+
+}
 
 @end
 
 @implementation TCBLoginViewController
+@synthesize scrollView;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self)
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillShown:)
+                                                     name:UIKeyboardWillShowNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWasHidden:)
+                                                     name:UIKeyboardDidHideNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillHide:)
+                                                     name:UIKeyboardWillHideNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -30,7 +50,83 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[self navigationController] setNavigationBarHidden:YES];
+    
+    [[self scrollView] setContentSize:CGSizeMake([[self scrollView] frame].size.width, [[self scrollView] frame].size.height)];
+
 }
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:UIKeyboardWillShowNotification
+     object:nil];
+    
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:UIKeyboardDidHideNotification
+     object:nil];
+    
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:UIKeyboardWillHideNotification
+     object:nil];
+    
+}
+
+
+-(IBAction)dismissKeyboardTap:(id)sender
+{
+    [self.view endEditing:YES];
+}
+
+-(void)keyboardWillHide:(NSNotification *)aNotification
+{
+   [[self scrollView] setContentSize:CGSizeMake(scrollViewContentSize.width, scrollViewContentSize.height - 760)];
+}
+
+- (void)keyboardWillShown:(NSNotification *)aNotification
+{
+   // [super keyboardWasShown];
+    [[self scrollView] setContentSize:CGSizeMake(scrollViewContentSize.width, scrollViewContentSize.height + 760)];
+    [self scrollViewToCenterOfScreen:scrollView];
+
+}
+
+- (void)keyboardWasHidden:(NSNotification *)aNotification
+{
+   // [super keyboardWasHidden];
+    
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    //Keyboard becomes visible
+    [self scrollViewToCenterOfScreen:textField];
+}
+
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    //keyboard will hide
+    [scrollView scrollRectToVisible:[textField frame] animated:YES];
+}
+
+-(void)scrollViewToCenterOfScreen:(UIView *)theView
+{
+    CGFloat viewCenterY = theView.center.y;
+    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    
+    CGFloat availableHeight = applicationFrame.size.height - 200; // Remove area covered by keyboard
+    
+    CGFloat y = viewCenterY - availableHeight / 2.0;
+    if (y < 0) {
+        y = 0;
+    }
+    [self.scrollView setContentOffset:CGPointMake(0, y) animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -75,7 +171,9 @@
                                         }
                                     }];
 }
-- (IBAction)twitterSignupTapped:(id)sender {
+
+- (IBAction)twitterSignupTapped:(id)sender
+{
     [PFTwitterUtils logInWithBlock:^(PFUser *user, NSError *error) {
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Twitter login.");
@@ -88,7 +186,8 @@
     }];
 }
 
-- (IBAction)testAccount:(id)sender {
+- (IBAction)testAccount:(id)sender
+{
     TCBCardViewController *cardApp = [[TCBCardViewController alloc] initWithNibName:@"TCBCardViewController" bundle:nil];
     [[self navigationController] pushViewController:cardApp animated:YES];    
 }
@@ -111,4 +210,5 @@
     TCBCreateAccountViewController *createAccountViewController = [[TCBCreateAccountViewController alloc] initWithNibName:@"TCBCreateAccountViewController" bundle:nil];
     [[self navigationController] pushViewController:createAccountViewController animated:YES];
 }
+
 @end
